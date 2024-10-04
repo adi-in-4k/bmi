@@ -1,0 +1,256 @@
+/* General reset for margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #052d1f; /* Light blue background */
+    color: #333;
+    padding: 20px;
+  }
+  
+  /* Apply Dancing Script to headings */
+  h1, h3 {
+    font-family: 'Dancing Script', cursive;
+    transition: color 0.3s ease; /* Smooth color transition */
+  }
+  
+  h1:hover, h3:hover {
+    color: #1b8b20; /* Change color on hover */
+  }
+  
+  /* Apply Dancing Script to buttons */
+  button {
+    font-family: 'Dancing Script', cursive;
+  }
+  
+  .container {
+    background-color: #a8e8a7;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin-top: 50px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Interactive hover effect on container */
+  .container:hover {
+    transform: translateY(-10px); /* Lifts the container slightly */
+    box-shadow: 0 0 25px rgba(10, 10, 10, 0.3); /* Stronger shadow on hover */
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #4a0404;
+    font-size: 36px;
+  }
+  
+  form p {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: inline-block;
+    width: 120px;
+    font-weight: bold;
+    color: #141111;
+    transition: color 0.3s ease;
+  }
+  
+  /* Change label color on focus */
+  input[type="text"]:focus + label {
+    color: #28a745;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    width: calc(100% - 140px);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Input field hover and focus effects */
+  input[type="text"]:hover, input[type="text"]:focus {
+    border-color: #166e2a;
+    box-shadow: 0 0 8px rgba(40, 167, 69, 0.4);
+    outline: none;
+  }
+  
+  button {
+    background-color: #28a745;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Button hover and click effects */
+  button:hover {
+    background-color: #1a3520;
+    transform: translateY(-2px); /* Slight lift on hover */
+  }
+  
+  button:active {
+    transform: translateY(2px); /* Button presses down on click */
+  }
+  
+  #results {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+    opacity: 0; /* Initially hidden */
+    animation: fadeIn 1s ease forwards; /* Fade in effect */
+  }
+  
+  /* Fade-in animation for results */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  #weight-guide {
+    background-color: #bad3e9;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    border: 1px solid #e0e0e0;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover effect on the weight guide */
+  #weight-guide:hover {
+    background-color: #bbe7ce; /* Light green background on hover */
+  }
+  
+  #weight-guide h3 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+  
+  #weight-guide p {
+    font-size: 14px;
+    text-align: center;
+    color: #555;
+  }
+  
+  nav {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  nav a {
+    color: #007bff;
+    text-decoration: none;
+    margin: 0 15px;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  nav a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #007bff;
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+  }
+  
+  nav a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  
+  nav a:hover {
+    color: #0056b3; /* Darker blue on hover */
+  }
+  
+  /* Page centering */
+  body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Mobile First Design */
+  @media (max-width: 600px) {
+    .container {
+      padding: 15px;
+      max-width: 100%;
+      margin-top: 30px;
+    }
+  
+    label {
+      width: 100%;
+      margin-bottom: 5px;
+    }
+  
+    input[type="text"] {
+      width: 100%;
+    }
+  
+    button {
+      padding: 10px;
+      font-size: 18px;
+    }
+  
+    nav a {
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+  
+  /* For tablets and medium-sized screens */
+  @media (min-width: 600px) and (max-width: 1024px) {
+    .container {
+      max-width: 500px;
+    }
+  
+    h1 {
+      font-size: 32px;
+    }
+  
+    button {
+      padding: 14px;
+      font-size: 22px;
+    }
+  }
+  
+  /* For larger screens */
+  @media (min-width: 1025px) {
+    .container {
+      max-width: 600px;
+    }
+  
+    h1 {
+      font-size: 36px;
+    }
+  
+    button {
+      padding: 16px;
+      font-size: 24px;
+    }
+  }
+  
